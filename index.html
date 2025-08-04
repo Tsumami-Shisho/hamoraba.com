@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ハモラバ - 合唱SNS</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      font-family: sans-serif;
+    }
+    section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    section:nth-of-type(2) { animation-delay: 0.2s; }
+    section:nth-of-type(3) { animation-delay: 0.4s; }
+    section:nth-of-type(4) { animation-delay: 0.6s; }
+    section:nth-of-type(5) { animation-delay: 0.8s; }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #82b1ff, #b388ff);
+      color: white;
+    }
+    .terms { background: #f0f0f0; }
+    .privacy { background: #e0f7fa; }
+    .contact { background: #fce4ec; }
+    .impressum { background: #fff3e0; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#hero">トップ</a>
+    <a href="#terms">利用規約</a>
+    <a href="#privacy">プライバシー</a>
+    <a href="#contact">お問い合わせ</a>
+    <a href="#impressum">運営者情報</a>
+  </nav>
+
+  <section class="hero" id="hero">
+    <h1>ハモラバ</h1>
+    <p>合唱をもっと自由に、もっと楽しく。</p>
+    <a href="https://social.hamoraba.com" style="color: #fff; text-decoration: underline;">SNSへアクセス</a>
+  </section>
+
+  <section class="terms" id="terms">
+    <h2>利用規約</h2>
+    <p>ここに利用規約の内容を記載します。</p>
+  </section>
+
+  <section class="privacy" id="privacy">
+    <h2>プライバシーポリシー</h2>
+    <p>ここにプライバシーポリシーの内容を記載します。</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>お問い合わせ</h2>
+    <p>フォームまたはメールリンクなどを設置。</p>
+    <p><a href="mailto:hamoraba.chorus@gmail.com">hamoraba.chorus@gmail.com</a></p>
+  </section>
+
+  <section class="impressum" id="impressum">
+    <h2>運営者情報（Impressum）</h2>
+    <p>運営者名・連絡先などを必要に応じて記載。</p>
+  </section>
+</body>
+</html>
